@@ -1,0 +1,12 @@
+# Dependências
+/vendor/
+
+# Configurações sensíveis
+config/conexao.php
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

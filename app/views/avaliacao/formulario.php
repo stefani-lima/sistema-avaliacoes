@@ -1,3 +1,7 @@
+<?php
+/** @var string $nomeSetor */
+/** @var string $textoPergunta */
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,57 +13,45 @@
     <header>
         <div class="header">
             <div class="setor">
-                 setor: ...
+                Setor: <?= htmlspecialchars($nomeSetor) ?>
             </div>
-            <form action="" method="post">
             <div class="pergunta">
-                <h1>
-                     Em uma escala de 0 a 10...
-                </h1>
-                <h2>
-                    pergunta
-                </h2>
+                <h1>Em uma escala de 0 a 10...</h1>
+                <h2><?= htmlspecialchars($textoPergunta) ?></h2>
             </div>
         </div>
     </header>
 
-    <main>
-        <div class="resposta">
-            <!-- loop respostas de 0 a 10 -->
-            <?php for ($i = 0; $i <= 10; $i++): ?>
-
-                <input
-                    type="radio"
-                    name="resposta"
-                    id="nota<?= $i ?>"
-                    value="<?= $i ?>"
-                >
-
-            <label for="nota<?= $i ?>">
-                <?= $i ?>
-            </label>
-
-            <?php endfor; ?>
-        </div>
-
-        <div class="res_opcional">
-            <p>Em poucas palavras, descreva o que motivou sua nota sobre a indicação <i>(opcional)</i></p>
-            <input type="text" name="res_opcional" id="res_opcional">
-        </div>
-
-        <input type="hidden" name="id_setor" value="<?= $idSetor ?>">
-        <input type="hidden" name="id_pergunta" value="<?= $idPergunta ?>">
-        <input type="hidden" name="id_dispositivo" value="<?= $idDispositivo ?>">
-    </main>
-
-    <footer>
-        <div class="footer">
-            <div class="enviar">
-                <input type="submit" value="Enviar">
+    <form action="/app/controllers/AvaliacaoController.php" method="post">
+        <main>
+            <div class="resposta">
+                <!-- pode ser de 0 até 10 -->
+                <?php for ($i = 0; $i <= 10; $i++): ?>
+                    <input
+                        type="radio"
+                        name="resposta"
+                        id="nota<?= $i ?>"
+                        value="<?= $i ?>"
+                    >
+                    <label for="nota<?= $i ?>"><?= $i ?></label>
+                <?php endfor; ?>
             </div>
-            <h3>Sua avaliação espontânea é anônima, nenhuma informação pessoal é solicitada ou armazenada.</h3>
-        </div>
-    </footer>
+
+            <div class="res_opcional">
+                <p>Em poucas palavras, descreva o que motivou sua nota <i>(opcional)</i></p>
+                <!-- resposta opcional -->
+                <input type="text" name="res_opcional" id="res_opcional">
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer">
+                <div class="enviar">
+                    <input type="submit" value="Enviar">
+                </div>
+                <h3>Sua avaliação espontânea é anônima, nenhuma informação pessoal é solicitada ou armazenada.</h3>
+            </div>
+        </footer>
     </form>
 </body>
 </html>

@@ -3,6 +3,7 @@
 
 # Configurações sensíveis
 config/conexao.php
+.env
 
 # Arquivos do sistema
 .DS_Store

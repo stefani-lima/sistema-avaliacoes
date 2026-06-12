@@ -22,7 +22,7 @@
         </div>
     </header>
 
-    <form action="/app/controllers/AvaliacaoController.php" method="post">
+    <form action="" method="post">
         <main>
             <div class="resposta">
                 <!-- pode ser de 0 até 10 -->

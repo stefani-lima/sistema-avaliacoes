@@ -11,15 +11,15 @@
     </header>
 
     <main>
-        <?php if (!empty($dispositivos)): ?>
+        <?php if (!empty($listarDispositivos)): ?>
     
         <table>
             <tr>
                 <th>ID</th>
-                <th>Pergunta</th>
+                <th>Nome do Dispositivo</th>
                 <th>Ativo</th>
             </tr>
-            <?php foreach ($dispositivos as $dispositivo): ?>
+            <?php foreach ($listarDispositivos as $dispositivo): ?>
                 <tr>
                     <td><?= htmlspecialchars($dispositivo['id_dispositivo']) ?></td>
                     <td><?= htmlspecialchars($dispositivo['nome_dispositivo']) ?></td>

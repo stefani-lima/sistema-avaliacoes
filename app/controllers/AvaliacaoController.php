@@ -1,6 +1,5 @@
 <?php
-// inicia a sessão
-session_start();
+require_once __DIR__ . '/../../config/auth.php';
 
 require_once __DIR__ . '/../../config/conexao.php';
 require_once __DIR__ . '/../models/avaliacao.php';

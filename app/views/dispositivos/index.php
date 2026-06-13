@@ -6,6 +6,17 @@
     <title>Dispositivos</title>
 </head>
 <body>
+    
+    <nav>
+        <div class="menu">
+            <a href="index.php?page=dispositivos">Dispositivos</a>
+            <a href="index.php?page=avaliacao">Avaliação</a>
+            <a href="index.php?page=perguntas">Perguntas</a>
+            <a href="index.php?page=setores">Setores</a>
+            <a href="index.php?page=logout">Sair</a>
+        </div>
+    </nav>
+    
     <header>
         <h1>Lista de dispositivos</h1>
     </header>

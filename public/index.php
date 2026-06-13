@@ -29,6 +29,10 @@ switch ($page) {
     case 'setores':
         require __DIR__ . '/../app/controllers/SetorController.php';
         break;
+
+    case 'logout':
+        require __DIR__ . '/../app/controllers/AuthController.php';
+        break;
     
     default:
         http_response_code(404);

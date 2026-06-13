@@ -83,7 +83,7 @@ INSERT INTO usuarios_administrativos (
 ) VALUES (
     'Administrador',
     'admin',
-    -- hash bcrypt de 'admin123' (password_hash). password_verify() exige hash, não texto puro.
+    -- hash
     '$2y$10$rvgIgUnVwrz6aU/iq8z8z.Cio6y8P/CUpWkkrEag2K7U2LGJjNzKa'
 );
 

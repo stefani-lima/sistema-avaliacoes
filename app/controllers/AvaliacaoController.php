@@ -11,7 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $idDispositivo = filter_input(INPUT_GET, 'dispositivo', FILTER_VALIDATE_INT);
 
     if (!$idDispositivo) {
-        die('Dispositivo não informado.');
+        
+        $listaDispositivos = listarDispositivos($pdo);
+        require_once __DIR__ . '/../views/avaliacao/selecionar.php';
+        exit;
     }
 
     $dispositivo = buscarDispositivo($pdo, $idDispositivo);

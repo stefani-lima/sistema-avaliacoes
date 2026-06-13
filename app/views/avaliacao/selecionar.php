@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perguntas</title>
+    <title>Dispositivos</title>
 </head>
 <body>
+    
     <nav>
         <div class="menu">
             <a href="index.php?page=dispositivos">Dispositivos</a>
@@ -15,25 +16,25 @@
             <a href="index.php?page=logout">Sair</a>
         </div>
     </nav>
-
+    
     <header>
-        <h1>Lista de perguntas</h1>
+        <h1>Lista de dispositivos</h1>
     </header>
 
     <main>
-        <?php if (!empty($perguntas)): ?>
+        <?php if (!empty($listaDispositivos)): ?>
     
         <table>
             <tr>
-                <th>ID</th>
-                <th>Pergunta</th>
-                <th>Ativo</th>
+                <th>Escolha o seu dispositivo</th>
             </tr>
-            <?php foreach ($perguntas as $pergunta): ?>
+            <?php foreach ($listaDispositivos as $dispositivo): ?>
                 <tr>
-                    <td><?= htmlspecialchars($pergunta['id_pergunta']) ?></td>
-                    <td><?= htmlspecialchars($pergunta['texto_pergunta']) ?></td>
-                    <td><?= htmlspecialchars($pergunta['ativo'] ? 'Sim' : 'Não') ?></td>
+                    <td>
+                        <a href="index.php?page=avaliacao&dispositivo=<?= $dispositivo['id_dispositivo'] ?>">
+                            Avaliar — <?= htmlspecialchars($dispositivo['nome_dispositivo']) ?>
+                        </a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
 

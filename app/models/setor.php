@@ -1,6 +1,6 @@
 <?php 
     function listarSetores(PDO $pdo): array {
-        $sql = "SELECT id_setor, nome_setor 
+        $sql = "SELECT id_setor, nome_setor, ativo
             FROM setores 
             WHERE ativo = TRUE";
 

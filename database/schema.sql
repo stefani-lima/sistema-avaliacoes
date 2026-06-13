@@ -83,7 +83,8 @@ INSERT INTO usuarios_administrativos (
 ) VALUES (
     'Administrador',
     'admin',
-    'admin123'
+    -- hash bcrypt de 'admin123' (password_hash). password_verify() exige hash, não texto puro.
+    '$2y$10$rvgIgUnVwrz6aU/iq8z8z.Cio6y8P/CUpWkkrEag2K7U2LGJjNzKa'
 );
 
 -- AVALIAÇÕES
@@ -115,8 +116,8 @@ INSERT INTO avaliacoes (
 (4, 1, 4, 6, 'Difícil encontrar vaga.'),
 (4, 2, 4, 5, NULL),
 (4, 3, 4, 7, NULL),
-(4, 4, 6, NULL),
-(4, 5, 6, 'Pode melhorar.'),
+(4, 4, 4, 6, NULL),
+(4, 5, 4, 6, 'Pode melhorar.'),
 
 (5, 1, 5, 8, 'Problema resolvido rapidamente.'),
 (5, 2, 5, 8, NULL),

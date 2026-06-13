@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($usuario) {
 
-            header('Location: /Projeto%20-%20Avaliações%20(PHP)/public/index.php?page=login');
+            header('Location: index.php?page=login');
             exit;
         } else {
             die('Erro ao criar nova conta.');

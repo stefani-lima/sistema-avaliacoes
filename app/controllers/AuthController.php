@@ -19,13 +19,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['id_usuario'] = $usuario['id_usuario'];
             $_SESSION['login'] = $usuario['login_usuario'];
 
-            header('Location: /Projeto%20-%20Avaliações%20(PHP)/public/index.php?page=dispositivos');
+            header('Location: index.php?page=dispositivos');
             exit;
             
         } else {
             
             //Usuário não encontrado ou senha incorreta.'
-            header('Location: /Projeto%20-%20Avaliações%20(PHP)/public/index.php?page=login');
+            header('Location: index.php?page=login');
             exit;
         }
     }

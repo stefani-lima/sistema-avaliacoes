@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <form action="?page=login" method="post">
-        <h1>Bem vindo(a)</h1>
+    <div class="form login">
+        <form action="?page=login" method="post">
+            <h1>Bem vindo(a)</h1>
 
-        <div class="login">
             <h2>Login</h2>
 
             <input type="hidden" name="id_usuario">
-            Login: <input type="text" name="login" id="login">
-            Senha: <input type="password" name="senha" id="senha">
-            <input type="submit" value="Entrar">
-        </div>
-        
-        <a href="?page=usuario">Crie sua conta</a>
-    </form>
+            Login: <input type="text" name="login" id="login"><br>
+            Senha: <input type="password" name="senha" id="senha"><br>
+            <input type="submit" value="Entrar" id="env">
+
+        </form>
+    </div>
+
+    <a href="?page=usuario">Crie sua conta</a>
 </body>
 </html>

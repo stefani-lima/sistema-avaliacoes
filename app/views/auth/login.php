@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="form login">
+    <div class="card login">
         <form action="?page=login" method="post">
             <h1>Bem vindo(a)</h1>
 
             <h2>Login</h2>
 
             <input type="hidden" name="id_usuario">
-            Login: <input type="text" name="login" id="login"><br>
-            Senha: <input type="password" name="senha" id="senha"><br>
-            <input type="submit" value="Entrar" id="env">
+            <div class="form_field">
+                <input type="text" placeholder="Login" name="login" id="login">
+            </div>
+
+            <div class="form_field">
+                <input type="password" placeholder="Senha" name="senha" id="senha"><br>
+            </div>
+
+            <input type="submit" value="Entrar" id="enviar">
 
         </form>
+        
+        <a href="?page=usuario" id="criar">Crie sua conta</a>
     </div>
 
-    <a href="?page=usuario">Crie sua conta</a>
 </body>
 </html>

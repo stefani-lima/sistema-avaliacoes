@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Conta</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <form action="?page=usuario" method="post">
-        <div class="form criar_conta">
+        <div class="card criar_conta">
             <h1>Criar uma conta</h1>
             <div class="form_field">
                 <input class="form_input" placeholder="Nome completo" type="text" name="nome" id="nome">    

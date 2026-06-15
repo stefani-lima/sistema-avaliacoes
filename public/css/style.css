@@ -8,9 +8,14 @@ body {
     justify-content: center;
 }
 
-h2 {
+h2, h3 {
     color: #0A3740;
 }
+
+h3 {
+    font-size: 13px;
+}
+
 
 table, th, td {
     border: 2px solid;
@@ -48,7 +53,13 @@ a:hover {
     border-color: #0A3740;
     border-radius: 4px;
     width: 60px;
+}
 
+.lista td:hover {
+    background-color: #0A3740;
+}
+.lista a:visited {
+    color: white;
 }
 
 div.card {
@@ -86,3 +97,16 @@ input.form_input{
 .menu li {
     margin-right: 20px;
 }
+
+.setor {
+    background-color: #0A3740;
+    border-radius: 5px;
+    display: flex;
+    height: auto;
+    justify-content: center;
+}
+
+div.formulario {
+    width: auto;
+}
+

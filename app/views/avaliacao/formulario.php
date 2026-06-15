@@ -13,56 +13,62 @@
 <body>
     <nav>
         <div class="menu">
-            <a href="index.php?page=dispositivos">Dispositivos</a>
-            <a href="index.php?page=avaliacao">Avaliação</a>
-            <a href="index.php?page=perguntas">Perguntas</a>
-            <a href="index.php?page=setores">Setores</a>
-            <a href="index.php?page=logout">Sair</a>
+            <ul>
+                <li><a href="index.php?page=dispositivos">Dispositivos</a></li>
+                <li><a href="index.php?page=avaliacao">Avaliação</a></li>
+                <li><a href="index.php?page=perguntas">Perguntas</a></li>
+                <li><a href="index.php?page=setores">Setores</a></li>
+                <li><a href="index.php?page=logout">Sair</a></li>
+            </ul>
         </div>
     </nav>
     
-    <header>
-        <div class="header">
-            <div class="setor">
-                Setor: <?= htmlspecialchars($nomeSetor) ?>
-            </div>
-            <div class="pergunta">
-                <h1>Em uma escala de 0 a 10...</h1>
-                <h2><?= htmlspecialchars($textoPergunta) ?></h2>
-            </div>
-        </div>
-    </header>
+    <div class="card formulario">
 
-    <form action="" method="post">
-        <main>
-            <div class="resposta">
-                <!-- pode ser de 0 até 10 -->
-                <?php for ($i = 0; $i <= 10; $i++): ?>
-                    <input
-                        type="radio"
-                        name="resposta"
-                        id="nota<?= $i ?>"
-                        value="<?= $i ?>"
-                    >
-                    <label for="nota<?= $i ?>"><?= $i ?></label>
-                <?php endfor; ?>
-            </div>
-
-            <div class="res_opcional">
-                <p>Em poucas palavras, descreva o que motivou sua nota <i>(opcional)</i></p>
-                <!-- resposta opcional -->
-                <input type="text" name="res_opcional" id="res_opcional">
-            </div>
-        </main>
-
-        <footer>
-            <div class="footer">
-                <div class="enviar">
-                    <input type="submit" value="Enviar">
+        <header>
+            <div class="header">
+                <div class="setor">
+                    Setor: <?= htmlspecialchars($nomeSetor) ?>
                 </div>
-                <h3>Sua avaliação espontânea é anônima, nenhuma informação pessoal é solicitada ou armazenada.</h3>
+                <div class="pergunta">
+                    <h1>Em uma escala de 0 a 10...</h1>
+                    <h2><?= htmlspecialchars($textoPergunta) ?></h2>
+                </div>
             </div>
-        </footer>
-    </form>
+        </header>
+
+        <form action="" method="post">
+            <main>
+                <div class="resposta">
+                    <!-- pode ser de 0 até 10 -->
+                    <?php for ($i = 0; $i <= 10; $i++): ?>
+                        <input
+                            type="radio"
+                            name="resposta"
+                            id="nota<?= $i ?>"
+                            value="<?= $i ?>"
+                        >
+                        <label for="nota<?= $i ?>"><?= $i ?></label>
+                    <?php endfor; ?>
+                </div>
+
+                <div class="res_opcional">
+                    <p>Em poucas palavras, descreva o que motivou sua nota <i>(opcional)</i></p>
+                    <!-- resposta opcional -->
+                    <input type="text" name="res_opcional" id="res_opcional">
+                </div>
+            </main>
+
+            <footer>
+                <div class="footer">
+                    <div class="enviar">
+                        <input type="submit" value="Enviar">
+                    </div>
+                    <h3>Sua avaliação espontânea é anônima, nenhuma informação pessoal é solicitada ou armazenada.</h3>
+                </div>
+            </footer>
+        </form>
+    </div>
+    
 </body>
 </html>

@@ -10,45 +10,49 @@
     
     <nav>
         <div class="menu">
-            <a href="index.php?page=dispositivos">Dispositivos</a>
-            <a href="index.php?page=avaliacao">Avaliação</a>
-            <a href="index.php?page=perguntas">Perguntas</a>
-            <a href="index.php?page=setores">Setores</a>
-            <a href="index.php?page=logout">Sair</a>
+            <ul>
+                <li><a href="index.php?page=dispositivos">Dispositivos</a></li>
+                <li><a href="index.php?page=avaliacao">Avaliação</a></li>
+                <li><a href="index.php?page=perguntas">Perguntas</a></li>
+                <li><a href="index.php?page=setores">Setores</a></li>
+                <li><a href="index.php?page=logout">Sair</a></li>
+            </ul>
         </div>
     </nav>
     
-    <header>
-        <h1>Lista de dispositivos</h1>
-    </header>
+    <div class="card lista_dispositivos"
+        <header>
+            <h1>Lista de dispositivos</h1>
+        </header>
 
-    <main>
-        <?php if (!empty($listaDispositivos)): ?>
-    
-        <table>
-            <tr>
-                <th>Escolha o seu dispositivo</th>
-            </tr>
-            <?php foreach ($listaDispositivos as $dispositivo): ?>
+        <main>
+            <?php if (!empty($listaDispositivos)): ?>
+        
+            <table class="lista"> 
                 <tr>
-                    <td>
-                        <a href="index.php?page=avaliacao&dispositivo=<?= $dispositivo['id_dispositivo'] ?>">
-                            Avaliar — <?= htmlspecialchars($dispositivo['nome_dispositivo']) ?>
-                        </a>
-                    </td>
+                    <th>Escolha o seu dispositivo</th>
                 </tr>
-            <?php endforeach; ?>
+                <?php foreach ($listaDispositivos as $dispositivo): ?>
+                    <tr>
+                        <td>
+                            <a href="index.php?page=avaliacao&dispositivo=<?= $dispositivo['id_dispositivo'] ?>">
+                            Avaliar — <?= htmlspecialchars($dispositivo['nome_dispositivo']) ?>
+                            </a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
 
-        </table>
+            </table>
 
-        <?php else: ?>
+            <?php else: ?>
 
-            <p>Sem resultados encontrados.</p>
+                <p>Sem resultados encontrados.</p>
 
-        <?php endif; ?>
+            <?php endif; ?>
 
 
-    </main>
+        </main>
+    </div>
 
 </body>
 </html>

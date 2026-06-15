@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <nav>
         <div class="menu">
-            <a href="index.php?page=dispositivos">Dispositivos</a>
-            <a href="index.php?page=avaliacao">Avaliação</a>
-            <a href="index.php?page=perguntas">Perguntas</a>
-            <a href="index.php?page=setores">Setores</a>
-            <a href="index.php?page=logout">Sair</a>
+            <ul>
+                <li><a href="index.php?page=dispositivos">Dispositivos</a></li>
+                <li><a href="index.php?page=avaliacao">Avaliação</a></li>
+                <li><a href="index.php?page=perguntas">Perguntas</a></li>
+                <li><a href="index.php?page=setores">Setores</a></li>
+                <li><a href="index.php?page=logout">Sair</a></li>
+            </ul>
         </div>
     </nav>
     

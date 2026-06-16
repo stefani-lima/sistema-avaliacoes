@@ -28,7 +28,7 @@
 
         <main>
 
-            <?php if (!empty($listarDispositivos)): ?>
+            <?php if (!empty($dispositivos)): ?>
         
             <table>
 
@@ -37,7 +37,7 @@
                     <th>Nome do Dispositivo</th>
                     <th>Ativo</th>
                 </tr>
-                <?php foreach ($listarDispositivos as $dispositivo): ?>
+                <?php foreach ($dispositivos as $dispositivo): ?>
                     <tr>
                         <td><?= htmlspecialchars($dispositivo['id_dispositivo']) ?></td>
                         <td><?= htmlspecialchars($dispositivo['nome_dispositivo']) ?></td>

@@ -3,7 +3,6 @@
 require_once __DIR__ . '/../../config/auth.php';
 // login
 require_once __DIR__ . '/../models/login.php';
-require_once __DIR__ . '/../models/logout.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -32,10 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
     }
-
-if (($_GET['page'] ?? '') === 'logout') {
-    logout();
-}
     
 require_once __DIR__ . '/../views/auth/login.php';
 ?>

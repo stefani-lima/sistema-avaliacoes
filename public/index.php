@@ -31,7 +31,7 @@ switch ($page) {
         break;
 
     case 'logout':
-        require __DIR__ . '/../app/controllers/AuthController.php';
+        require __DIR__ . '/../app/controllers/LogoutController.php';
         break;
     
     default:

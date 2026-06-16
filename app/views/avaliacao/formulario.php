@@ -52,17 +52,17 @@
                     <?php endfor; ?>
                 </div>
 
-                <div class="res_opcional">
+                <div class="form_field">
                     <p>Em poucas palavras, descreva o que motivou sua nota <i>(opcional)</i></p>
                     <!-- resposta opcional -->
-                    <input type="text" name="res_opcional" id="res_opcional">
+                    <input type="text" name="res_opcional" id="res_opcional" class="form_input">
                 </div>
             </main>
 
             <footer>
                 <div class="footer">
                     <div class="enviar">
-                        <input type="submit" value="Enviar">
+                        <input type="submit" id="enviar" value="Enviar">
                     </div>
                     <h3>Sua avaliação espontânea é anônima, nenhuma informação pessoal é solicitada ou armazenada.</h3>
                 </div>

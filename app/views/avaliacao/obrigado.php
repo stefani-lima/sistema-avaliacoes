@@ -20,14 +20,18 @@
         </div>
     </nav>
     
-    <header>
-        <h1>Muito obrigado(a) pelo seu feedback!</h1>
-    </header>
+    <div class="card">
 
-    <section>
-        <h2>Sua opinião é fundamental para continuarmos evoluindo e oferecendo a melhor experiência possível.</h2>
-    </section>
+        <header>
+            <h1>Muito obrigado(a) pelo seu feedback!</h1>
+        </header>
 
-    <a href="/public/index.php">Voltar para a Página Inicial</a>
+        <section>
+            <h2>Sua opinião é fundamental para continuarmos evoluindo e oferecendo a melhor experiência possível.</h2>
+        </section>
+
+        <a href="index.php?page=avaliacao" id="voltar">Voltar</a>
+    </div>
+
 </body>
 </html>

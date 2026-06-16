@@ -1,3 +1,5 @@
+/* estilo padrão */
+
 body {
     background-color: #0A3740;
     color: white;
@@ -33,11 +35,6 @@ a:link {
     text-decoration: none;
 }
 
-#criar:visited {
-    color: #0A3740;
-            /*#D6D578*/
-}
-
 a:visited {
     color: #B1BF63;
 }
@@ -46,21 +43,36 @@ a:hover {
     color: whitesmoke;
 }
 
-#enviar {
-    margin-top: 10px;
-    background-color: white;
-    border: 5px;
-    border-color: #0A3740;
-    border-radius: 4px;
-    width: 60px;
-}
-
 .lista td:hover {
     background-color: #0A3740;
 }
 .lista a:visited {
     color: white;
 }
+
+/* botões */
+
+#criar:visited {
+    color: #0A3740;
+            /*#D6D578*/
+}
+
+#enviar {
+    margin-top: 10px;
+    background-color: white;
+    border: 2px solid;
+    border-color: #0A3740;
+    border-radius: 4px;
+    width: 60px;
+}
+
+#voltar {
+    background-color: #0A3740;
+    border-radius: 5px;
+    color: white;
+}
+
+/* caixa padrão principal */
 
 div.card {
     margin-top: 75px;
@@ -75,17 +87,26 @@ div.card {
     border-radius: 40px;
 }
 
-div.form_field {
+/* formulários */
+
+.form_field {
     width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 5px;
 }
 
 input.form_input{
     width: 90%;
 }
+
+div.formulario {
+    width: auto;
+}
+
+/* menu de navegação */
 
 .menu ul {
     list-style: none;
@@ -98,6 +119,8 @@ input.form_input{
     margin-right: 20px;
 }
 
+/* setor */
+
 .setor {
     background-color: #0A3740;
     border-radius: 5px;
@@ -106,7 +129,43 @@ input.form_input{
     justify-content: center;
 }
 
-div.formulario {
-    width: auto;
+/* botões coloridos de resposta */
+
+.resposta {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
 }
+
+.resposta label {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resposta label:hover {
+    border-color: white;
+}
+
+.resposta input[type="radio"] {
+    display: none;
+}
+
+#nota0:checked + label { background-color: #e74c3c; border-color: #e74c3c; color: #fff; }
+#nota1:checked + label { background-color: #e65c40; border-color: #e65c40; color: #fff; }
+#nota2:checked + label { background-color: #e67e22; border-color: #e67e22; color: #fff; }
+#nota3:checked + label { background-color: #f39c12; border-color: #f39c12; color: #fff; }
+#nota4:checked + label { background-color: #f1c40f; border-color: #f1c40f; color: #333; }
+#nota5:checked + label { background-color: #f5d13d; border-color: #f5d13d; color: #333; }
+#nota6:checked + label { background-color: #e1cf31; border-color: #e1cf31; color: #333; }
+
+/* Botões 7 e 8: Tons de Amarelo/Verde Claro (Neutros) */
+#nota7:checked + label { background-color: #bfd641; border-color: #bfd641; color: #333; }
+#nota8:checked + label { background-color: #8bc34a; border-color: #8bc34a; color: #fff; }
+
+/* Botões 9 e 10: Tons de Verde (Promotores) */
+#nota9:checked + label  { background-color: #2ecc71; border-color: #2ecc71; color: #fff; }
+#nota10:checked + label { background-color: #27ae60; border-color: #27ae60; color: #fff; }
 

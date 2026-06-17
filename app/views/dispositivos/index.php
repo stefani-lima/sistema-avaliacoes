@@ -41,7 +41,7 @@
                     <tr>
                         <td><?= htmlspecialchars($dispositivo['id_dispositivo']) ?></td>
                         <td><?= htmlspecialchars($dispositivo['nome_dispositivo']) ?></td>
-                        <td><?= htmlspecialchars($dispositivo['ativo'] ? 'Sim' : 'Não') ?></td>
+                        <td><?= $dispositivo['ativo'] ? '<span class="badge-sim">Sim</span>' : '<span class="badge-nao">Não</span>' ?></td>
                     </tr>
                 <?php endforeach; ?>
 

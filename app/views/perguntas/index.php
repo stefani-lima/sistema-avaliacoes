@@ -39,7 +39,7 @@
                     <tr>
                         <td><?= htmlspecialchars($pergunta['id_pergunta']) ?></td>
                         <td><?= htmlspecialchars($pergunta['texto_pergunta']) ?></td>
-                        <td><?= htmlspecialchars($pergunta['ativo'] ? 'Sim' : 'Não') ?></td>
+                        <td><?= $pergunta['ativo'] ? '<span class="badge-sim">Sim</span>' : '<span class="badge-nao">Não</span>' ?></td>
                     </tr>
                 <?php endforeach; ?>
 

@@ -12,9 +12,19 @@ body {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
+    padding-top: 40px;
+}
+
+h1 {
+    color: #0A3740;
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
 }
 
 h2, h3 {
@@ -25,16 +35,29 @@ h3 {
     font-size: 13px;
 }
 
+strong {
+    font-size: 30px;
+    color: white;
+}
 
-table, th, td {
-    border: 2px solid;
-    border-collapse: separate;
-    border-radius: 10px;
+table {
+    border-style: none;
+    padding: 5px;
+}
+
+td {
     border-spacing: 5px;
+    background-color:#8bc34a;
+    border-radius: 6px;
 }
 
 th, td {
     padding: 10px;
+}
+
+th {
+    color: #0A3740;
+    border: none;
 }
 
 a:link {
@@ -60,33 +83,55 @@ a:hover {
 /* botões */
 
 #enviar {
-    margin-top: 10px;
     background-color: white;
     border: 2px solid #0A3740;
     border-radius: 4px;
     width: 60px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
 }
 
 #voltar {
     background-color: #0A3740;
     border-radius: 5px;
     color: white;
+    padding: 5px;
+}
+
+/* ativo: sim ou não */
+
+.badge-sim {
+    background-color: #2ecc71;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+.badge-nao {
+    background-color: #e74c3c;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
 }
 
 /* caixa padrão principal */
 
 div.card {
-    margin-top: 75px;
     background-color: #B1BF63;
-    width: 90%;
+    width: 100%;
     max-width: 750px;
-    padding: 60px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 20px;
     border-radius: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    border-bottom: 3px solid rgba(10, 55, 64, 0.2);
+    padding-bottom: 15px;
 }
 
 /* formulários */
@@ -111,6 +156,20 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 5px;
+}
+
+p {
+    font-size: 20px;
+}
+
+#res_opcional {
+    height: 50px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 input.form_input{
@@ -138,8 +197,12 @@ input.form_input{
 .setor {
     background-color: #0A3740;
     border-radius: 5px;
-    display: flex;
     justify-content: center;
+    margin-bottom: 25px;
+}
+
+.pergunta {
+    margin-bottom: 10px;
 }
 
 /* botões coloridos de resposta */

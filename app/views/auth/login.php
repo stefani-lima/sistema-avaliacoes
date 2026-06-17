@@ -9,7 +9,7 @@
 <body>
     <div class="card login">
         <form action="?page=login" method="post">
-            <h1>Bem vindo(a)</h1>
+            <strong>Bem vindo(a)</strong>
 
             <h2>Login</h2>
 

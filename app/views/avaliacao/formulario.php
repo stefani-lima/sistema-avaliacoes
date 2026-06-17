@@ -31,7 +31,6 @@
                     Setor: <?= htmlspecialchars($nomeSetor) ?>
                 </div>
                 <div class="pergunta">
-                    <h1>Em uma escala de 0 a 10...</h1>
                     <h2><?= htmlspecialchars($textoPergunta) ?></h2>
                 </div>
             </div>

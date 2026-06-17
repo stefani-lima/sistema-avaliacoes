@@ -39,7 +39,7 @@
                     <tr>
                         <td><?= htmlspecialchars($setor['id_setor']) ?></td>
                         <td><?= htmlspecialchars($setor['nome_setor']) ?></td>
-                        <td><?= htmlspecialchars($setor['ativo'] ? 'Sim' : 'Não') ?></td>
+                        <td><?= $setor['ativo'] ? '<span class="badge-sim">Sim</span>' : '<span class="badge-nao">Não</span>' ?></td>
                     </tr>
                 <?php endforeach; ?>
 
